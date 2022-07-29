@@ -1,79 +1,86 @@
 package dto;
 
+import com.verta.entity.Addition;
+import com.verta.entity.Cuisines;
+import com.verta.entity.Dessert;
+import com.verta.entity.Drink;
+import com.verta.entity.Lunch;
+import com.verta.entity.Meal;
+
 public class OrderDto {
-    private String cuisines;
-    private String lunch;
-    private String meal;
-    private String dessert;
-    private String drink;
-    private String addition;
+    private Addition addition;
+    private Cuisines cuisines;
+    private Dessert dessert;
+    private Drink drink;
+    private Lunch lunch;
+    private Meal meal;
 
-    public OrderDto(String cuisines, String lunch, String meal, String dessert, String drink, String addition) {
-        this.cuisines = cuisines;
-        this.lunch = lunch;
-        this.meal = meal;
-        this.dessert = dessert;
-        this.drink = drink;
+    public OrderDto(Addition addition, Cuisines cuisines, Dessert dessert, Drink drink, Lunch lunch, Meal meal) {
         this.addition = addition;
-    }
-
-    public String getCuisines() {
-        return cuisines;
-    }
-
-    public void setCuisines(String cuisines) {
         this.cuisines = cuisines;
-    }
-
-    public String getLunch() {
-        return lunch;
-    }
-
-    public void setLunch(String lunch) {
+        this.dessert = dessert;
+        this.drink = drink;
         this.lunch = lunch;
-    }
-
-    public String getMeal() {
-        return meal;
-    }
-
-    public void setMeal(String meal) {
         this.meal = meal;
     }
 
-    public String getDessert() {
-        return dessert;
-    }
-
-    public void setDessert(String dessert) {
-        this.dessert = dessert;
-    }
-
-    public String getDrink() {
-        return drink;
-    }
-
-    public void setDrink(String drink) {
-        this.drink = drink;
-    }
-
-    public String getAddition() {
+    public Addition getAddition() {
         return addition;
     }
 
-    public void setAddition(String addition) {
+    public void setAddition(Addition addition) {
         this.addition = addition;
+    }
+
+    public Cuisines getCuisines() {
+        return cuisines;
+    }
+
+    public void setCuisines(Cuisines cuisines) {
+        this.cuisines = cuisines;
+    }
+
+    public Dessert getDessert() {
+        return dessert;
+    }
+
+    public void setDessert(Dessert dessert) {
+        this.dessert = dessert;
+    }
+
+    public Drink getDrink() {
+        return drink;
+    }
+
+    public void setDrink(Drink drink) {
+        this.drink = drink;
+    }
+
+    public Lunch getLunch() {
+        return lunch;
+    }
+
+    public void setLunch(Lunch lunch) {
+        this.lunch = lunch;
+    }
+
+    public Meal getMeal() {
+        return meal;
+    }
+
+    public void setMeal(Meal meal) {
+        this.meal = meal;
     }
 
     @Override
     public String toString() {
         return "OrderDto{" +
-                "cuisines='" + cuisines + '\'' +
-                ", lunch='" + lunch + '\'' +
-                ", meal='" + meal + '\'' +
-                ", dessert='" + dessert + '\'' +
-                ", drink='" + drink + '\'' +
-                ", addition='" + addition + '\'' +
+                "addition=" + addition +
+                ", cuisines=" + cuisines +
+                ", dessert=" + dessert +
+                ", drink=" + drink +
+                ", lunch=" + lunch +
+                ", meal=" + meal +
                 '}';
     }
 }
